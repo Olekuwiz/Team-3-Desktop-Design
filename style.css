@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Section - Phone Mockup */
+.left-section {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  z-index: 1;
+}
+
+.purple-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 600px;
+  background: linear-gradient(135deg, #a83cf5, #8b3df5);
+  border-radius: 50% 50% 50% 50%;
+  clip-path: circle(400px at 0% 0%);
+  z-index: 0;
+}
+
+.phone-mockup {
+  width: 320px;
+  height: 600px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  transform: translateY(-10px);
+}
+
+.phone-header {
+  background: #a83cf5;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-status {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.menu-icon {
+  color: white;
+  font-size: 14px;
+}
+
+.chat-container {
+  padding: 15px;
+  height: 480px;
+  overflow-y: auto;
+  background: #f9f9fb;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  line-height: 1.4;
+}
+
+.sent-message {
+  background: #e0e0f0;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.received-message {
+  background: #fff;
+  align-self: flex-start;
+  border: 1px solid #e0e0f0;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.image-gallery img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.booking-options {
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #e0e0f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #d0d0e0;
+}
+
+.option-price {
+  font-weight: bold;
+  color: #a83cf5;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #f0f0f5;
+  border-radius: 10px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.send-btn {
+  width: 30px;
+  height: 30px;
+  background: #a83cf5;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Right Section - Text Content */
+.right-section {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.right-section h1 {
+  font-size: 3rem;
+  color: #2d1c4a;
+  margin-bottom: 20px;
+}
+
+.right-section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .left-section {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .right-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .right-section h1 {
+    font-size: 2.2rem;
+  }
+}
