@@ -1,11 +1,12 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f7fa;
   color: #333;
   display: flex;
@@ -24,57 +25,66 @@ body {
   justify-content: space-between;
 }
 
-/* Left Section - Phone Mockup */
-.left-section {
-  position: relative;
-  width: 400px;
-  height: 600px;
-  z-index: 1;
-}
-
-.purple-bg {
+/* Purple Gradient Background (Left Side) */
+.gradient-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 400px;
-  height: 600px;
+  height: 700px;
   background: linear-gradient(135deg, #a83cf5, #8b3df5);
-  border-radius: 50% 50% 50% 50%;
-  clip-path: circle(400px at 0% 0%);
-  z-index: 0;
+  border-bottom-right-radius: 250px;
+  border-bottom-left-radius: 250px;
 }
 
+/* Phone Mockup */
 .phone-mockup {
   width: 320px;
   height: 600px;
   background: white;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: sticky;
   position: relative;
-  margin: 0 auto;
+  margin-top: 80px;
+  left: 200px;
   transform: translateY(-10px);
+  
 }
 
-.phone-header {
+/* Status Bar */
+.status-bar {
   background: #a83cf5;
+  border-radius: 40px 40px 0 0;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: #a83cf5;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.user-info {
+.status-left,
+.status-right {
+  font-size: 12px;
+  font: light purple;
+  background-color: #666;
+
+}
+
+.status-center {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 1;
 }
 
-.user-avatar {
-  width: 30px;
-  height: 30px;
+.avatar {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -82,11 +92,12 @@ body {
 .user-name {
   font-weight: 600;
   font-size: 14px;
+  color: white;
 }
 
 .user-status {
   font-size: 10px;
-  opacity: 0.8;
+  color: #dcdcdc;
 }
 
 .menu-icon {
@@ -94,31 +105,52 @@ body {
   font-size: 14px;
 }
 
+/* Chat Container */
 .chat-container {
   padding: 15px;
   height: 480px;
   overflow-y: auto;
-  background: #f9f9fb;
+  background: offwhite;
 }
 
 .message {
+
   margin-bottom: 15px;
   max-width: 200px;
   padding: 10px;
   border-radius: 15px;
   line-height: 1.4;
+  font-size: 12px;
 }
-
-.sent-message {
+.message.receivedd {
   background: #e0e0f0;
-  align-self: flex-end;
-  margin-left: auto;
+  text-align: left;
+  margin-left: 2px;
+  border: 1px solid white;
 }
+.message.receivedd {
+  border-color: #f9f9f9;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  align-self: flex-end;
+} 
 
-.received-message {
-  background: #fff;
+
+/*this line controls all the text and 4 chatboxes*/
+.received {
+  background: #e0e0f0;
+  color: purple;
   align-self: flex-start;
-  border: 1px solid #e0e0f0;
+  margin-left: 0;
+  border: 1px solid rgb(199, 194, 194);
+}
+/*this line is for the can you make it gray text*/
+.sent {
+  background: #fff;
+  align-self: flex-end;
+  color: gray;
+  margin-left: auto;
+  border: 1px solid rgb(248, 242, 242);
 }
 
 .image-gallery {
@@ -134,7 +166,7 @@ body {
   object-fit: cover;
 }
 
-.booking-options {
+.pricing-options {
   margin-top: 20px;
 }
 
@@ -143,21 +175,36 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background: #e0e0f0;
+  background: rgb(124, 35, 124) gradient;
+  border: 1px solid #d9c6f7; 
   border-radius: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .option:hover {
-  background: #d0d0e0;
+  background: purple;
+}
+.option input[type="radio"] {
+  accent-color: #a83cf5; /* Purple radio button */
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 
-.option-price {
+.option-text {
+  font-size: 12px;
+  color: gray;
+}
+
+.price {
   font-weight: bold;
-  color: #a83cf5;
+  color: white;
+  font-size: 14px;
 }
 
+/* Input Area */
 .input-area {
   display: flex;
   padding: 10px;
@@ -174,12 +221,13 @@ body {
   border-radius: 5px;
   outline: none;
   font-size: 14px;
+  color: #333;
 }
 
 .send-btn {
   width: 30px;
   height: 30px;
-  background: #a83cf5;
+  background: #130120;
   border: none;
   border-radius: 50%;
   color: white;
@@ -187,22 +235,24 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 14px;
 }
 
-/* Right Section - Text Content */
-.right-section {
+/* Right Content */
+.content {
   flex: 1;
   max-width: 600px;
   padding: 20px;
 }
 
-.right-section h1 {
+.content h1 {
   font-size: 3rem;
   color: #2d1c4a;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.right-section p {
+.content p {
   font-size: 1.1rem;
   color: #666;
   line-height: 1.6;
@@ -212,20 +262,22 @@ body {
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
 
-  .left-section {
-    width: 100%;
-    max-width: 320px;
+  .phone-mockup {
+    width: 300px;
+    height: 550px;
+    border-radius: 40px;
   }
 
-  .right-section {
-    max-width: 100%;
-    text-align: center;
+  .gradient-bg {
+    width: 300px;
+    height: 100px;
+    
   }
 
-  .right-section h1 {
+  .content h1 {
     font-size: 2.2rem;
   }
 }

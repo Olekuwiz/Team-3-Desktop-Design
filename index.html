@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simple Booking</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  
 <div class="container">
-<!-- Left Section - Phone Mockup -->
-<div class="left-section">
-<div class="purple-bg"></div>
+ <!-- Left Side: Purple Gradient Background -->
+ <div class="gradient-bg"></div>
+
+<!-- Phone Mockup -->
 <div class="phone-mockup">
-<div class="phone-header">
-<div class="user-info">
-<img src="avatarman.jpg" alt="avatarman">
-
-<div>
-<p class="user-name">Samuel Green</p>
-<p class="user-status">Available to walk</p>
-</div>
-</div>
-<span class="menu-icon">⋮</span>
+<!-- Status Bar -->
+<div class="status-bar">
+<div class="status-left"></div>
+<div class="status-center">
+<img src="img/avatarman.jpg" alt="Avatar" class="avatar">
+<div class="user-name">Samuel Green</div>
+<div class="user-status">Available to walk</div>
 </div>
 
+<div class="status-right">⋮</div>
+</div> 
+   
 <div class="chat-container">
-<div class="message received-message">
+<!-- Message from user -->
+<div class="message received">
  That sounds great. I'd be happy with that.
-          </div>
-
-          <div class="message received-message">
-            Could you send over some pictures of your dog, please?
-          </div>
-
-          <div class="image-gallery">
-            <img src="dog-image-1c.jpg" alt="Dog 1" />
-            <img src="dog-image-2.jpg" alt="Dog 2" />
-            <img src="dog-image-3.jpg" alt="Dog 3" />
-          </div>
-
-          <div class="message received-message">
-            Here are a few pictures. She's a happy girl!
-          </div>
-
-          <div class="message sent-message">
-            Can you make it?
-          </div>
-
-          <div class="message received-message">
-            She looks so happy! The time we discussed works. How long shall I take her out for?
-          </div>
-
-          <div class="booking-options">
-            <div class="option">
-              <span>30 minute walk</span>
-              <span class="option-price">$29</span>
-            </div>
-            <div class="option">
-              <span>1 hour walk</span>
-              <span class="option-price">$49</span>
-            </div>
-          </div>
+</div>
+<div class="message received">
+Could you send over some pictures of your dog, please?
+</div>
+ <!-- Image gallery -->
+        <div class="image-gallery">
+          <img src="img/dog-image-1c.jpg" alt="Dog 1">
+          <img src="img/dog-image-2.jpg" alt="Dog 2">
+          <img src="img/dog-image-3.jpg" alt="Dog 3">
         </div>
 
-        <div class="input-area">
-          <input type="text" placeholder="Type a message..." />
-          <button class="send-btn">➤</button>
+        <div class="message receivedd">
+          Here are a few pictures. She's a happy girl!
         </div>
+
+        <div class="message sent">
+          Can you make it?
+        </div>
+
+  <div class="message received">
+          She looks so happy! The time we discussed works. How long shall I take her out for?
+        </div>
+
+          <!-- Pricing Options -->
+        <div class="pricing-options">
+          <label class="option">
+            <input type="radio" name="walk" value="30min" />
+            <span class="option-text">30 minute walk</span>
+            <span class="price">$29</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="walk" value="1hour" />
+            <span class="option-text">1 hour walk</span>
+            <span class="price">$49</span>
+          </label>
+        </div>
+      </div>
+
+       <!-- Input Area -->
+      <div class="input-area">
+        <input type="text" placeholder="Type a message..." />
+        <button class="send-btn">➤</button>
       </div>
     </div>
 
-    <!-- Right Section - Content -->
-    <div class="right-section">
+    <!-- Right Side: Content -->
+    <div class="content">
       <h1>Simple booking</h1>
       <p>
         Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
