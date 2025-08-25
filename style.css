@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Purple Gradient Background (Left Side) */
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 700px;
+  background: linear-gradient(135deg, #a83cf5, #8b3df5);
+  border-bottom-right-radius: 250px;
+  border-bottom-left-radius: 250px;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+  width: 320px;
+  height: 600px;
+  background: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: sticky;
+  position: relative;
+  margin-top: 80px;
+  left: 200px;
+  transform: translateY(-10px);
+  
+}
+
+/* Status Bar */
+.status-bar {
+  background: #a83cf5;
+  border-radius: 40px 40px 0 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a83cf5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-left,
+.status-right {
+  font-size: 12px;
+  font: light purple;
+  background-color: #666;
+
+}
+
+.status-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.user-status {
+  font-size: 10px;
+  color: #dcdcdc;
+}
+
+.menu-icon {
+  color: white;
+  font-size: 14px;
+}
+
+/* Chat Container */
+.chat-container {
+  padding: 15px;
+  height: 480px;
+  overflow-y: auto;
+  background: offwhite;
+}
+
+.message {
+
+  margin-bottom: 15px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  line-height: 1.4;
+  font-size: 12px;
+}
+.message.receivedd {
+  background: #e0e0f0;
+  text-align: left;
+  margin-left: 2px;
+  border: 1px solid white;
+}
+.message.receivedd {
+  border-color: #f9f9f9;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  align-self: flex-end;
+} 
+
+
+/*this line controls all the text and 4 chatboxes*/
+.received {
+  background: #e0e0f0;
+  color: purple;
+  align-self: flex-start;
+  margin-left: 0;
+  border: 1px solid rgb(199, 194, 194);
+}
+/*this line is for the can you make it gray text*/
+.sent {
+  background: #fff;
+  align-self: flex-end;
+  color: gray;
+  margin-left: auto;
+  border: 1px solid rgb(248, 242, 242);
+}
+
+.image-gallery {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.image-gallery img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pricing-options {
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgb(124, 35, 124) gradient;
+  border: 1px solid #d9c6f7; 
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.option:hover {
+  background: purple;
+}
+.option input[type="radio"] {
+  accent-color: #a83cf5; /* Purple radio button */
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.option-text {
+  font-size: 12px;
+  color: gray;
+}
+
+.price {
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #f0f0f5;
+  border-radius: 10px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.send-btn {
+  width: 30px;
+  height: 30px;
+  background: #130120;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Right Content */
+.content {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+.content h1 {
+  font-size: 3rem;
+  color: #2d1c4a;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .phone-mockup {
+    width: 300px;
+    height: 550px;
+    border-radius: 40px;
+  }
+
+  .gradient-bg {
+    width: 300px;
+    height: 100px;
+    
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+}
