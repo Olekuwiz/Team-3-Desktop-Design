@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* App Container (Mobile Chat Box) */
+.app-container {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 320px;
+  max-width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+/* profile picture */
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333;
+  margin-right: 10px;
+}
+
+/* Header */
+.chat-header {
+  background: linear-gradient(90deg, #a044ff, #6a00ff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333;
+  margin-right: 10px;
+}
+
+.chat-info h3 {
+  font-size: 16px;
+}
+
+.chat-info p {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Chat Body */
+.chat-body {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.message {
+  background: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.message.received {
+  align-self: flex-start;
+  background: #ececec;
+
+}
+ 
+
+
+.message.sent {
+  align-self: flex-end;
+  background: #d6c1ff;
+  color: #333;
+}
+
+/* Dog Pictures */
+.dog-pics {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+    justify-content: right;
+}
+
+.dog-pics img {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Price Options */
+.price-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #a044ff, #6a00ff);
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  background: #f1f1f1;
+}
+
+.chat-footer button {
+  background: #6a00ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.chat-footer button:hover {
+  background: #5a00e0;
+}
+.info-section {
+  max-width: 320px;
+  background: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.info-section h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.info-section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
